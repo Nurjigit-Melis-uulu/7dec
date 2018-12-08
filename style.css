@@ -35,7 +35,28 @@
 .logo {
     width: 76%;
 }
+:root {
+    --text-color: black;
+    --bg-color: transparent;
+    --font-size: 20px;
+    --text-align: center;
+    --font-family: Arial;
+    --text-decor: none;
+    --font-bold: bold;
+    --font-italic: normal;
+    --border-radius: 0px;
+}
 .logo h1 {
     width: 90%;
     margin: 40px auto;
+    font-size: var(--font-size);/*have*/
+    background-color: var(--bg-color);/*have*/
+    color: var(--text-color);/*have*/
+    text-align: var(--text-align);/*have*/
+    font-family: var(--font-family);/*have*/
+    text-decoration: var(--text-decor);/*have*/
+    font-weight: var(--font-bold);/*have*/
+    font-style: var(--font-italic);/*have*/
+    border: var(--border-size) solid var(--text-color);/*have*/
+    border-radius: var(--border-radius);/*have*/
 }
