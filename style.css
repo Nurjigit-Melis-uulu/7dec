@@ -1,15 +1,22 @@
-.container {
+.content {
     width: 24%;
-    margin: 10px 0 10px 10px;;
+    margin: -5px 0 0 -5px;
+    border-right: 3px solid black;
+    background-color: orange;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }     
-.container > div {
+.content > div {
     width: 100%;
     height: 30px;
 }
-.container > div > label {
+.content > div.chek {
+    width: calc(100% / 3);
+}
+.content > div > label {
     width: 50%;
 }
-.container > div > input.area {
+.content > div > input.area {
     margin-left: 5px;
     border: 0;
     border-radius: 4px;
@@ -17,6 +24,18 @@
     padding: 1px 10px;
     outline: none;
 }
-.container > div > input.area:focus {
+.content > div > input.area:focus {
     border: 1px solid rgb(66, 206, 219);
+}
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+.logo {
+    width: 76%;
+}
+.logo h1 {
+    width: 90%;
+    margin: 40px auto;
 }
