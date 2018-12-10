@@ -11,64 +11,84 @@ let borderRadius = document.querySelector('#borderRadius');
 let block = document.querySelector('#block');
 let colorBackground = document.querySelector('#Background');
 let fontFamily = document.querySelector('#font-family');
+let borderColor = document.querySelector('#borderColor');
+let weightHeading = document.querySelector('#weightHeading');
+let heightHeading = document.querySelector('#heightHeading');
+let lineHeading = document.querySelector('#lineheight');
+
+lineHeading.addEventListener('change', function() {
+	document.documentElement.style.setProperty('--line-height', lineHeading.value + "px");
+});
+
+heightHeading.addEventListener('change', function() {
+	document.documentElement.style.setProperty('--height', this.value + "px");
+	document.documentElement.style.setProperty('--line-height', heightHeading.value + "px");
+});
+
+weightHeading.addEventListener('change', function() {
+	document.documentElement.style.setProperty('--weight', this.value + "%");
+});
 
 yourName.addEventListener('change', function() {
 	helloHeading.innerText = "Hello " + yourName.value + "!";
 });
 
 headingColor.addEventListener('change', function() {
-	helloHeading.style.color = headingColor.value;
+	document.documentElement.style.setProperty('--text-color', headingColor.value);
 });
 
 sizeHeading.addEventListener('change', function() {
-	helloHeading.style.fontSize = sizeHeading.value + 'px'; 
+	document.documentElement.style.setProperty('--font-size', sizeHeading.value + "px");
 });
 
 underline.addEventListener('change', function() {
 	if (this.checked == true) {
-		helloHeading.style.textDecoration = "underline";
+		document.documentElement.style.setProperty('--text-decor', "underline");
 	}
 	else {
-		helloHeading.style.textDecoration = "";
+		document.documentElement.style.setProperty('--text-decor', "none");
 	}
 })
 
 align.addEventListener('change', function() {
-	helloHeading.style.textAlign = this.value;
+	document.documentElement.style.setProperty('--text-align', this.value);
 });
 
 italic.addEventListener('change', function() {
 	if (this.checked == true) {
-		helloHeading.style.fontStyle = "italic";
+		document.documentElement.style.setProperty('--font-italic', "italic");
 	}
 	else {
-		helloHeading.style.fontStyle = "";
+		document.documentElement.style.setProperty('--font-italic', "normal");
 	}
 });
 
 notBold.addEventListener('change', function() {
 	if (this.checked == true) {
-		helloHeading.style.fontWeight = "lighter";
+		document.documentElement.style.setProperty('--font-bold', "lighter");
 	}
 	else {
-		helloHeading.style.fontWeight = "";
+		document.documentElement.style.setProperty('--font-bold', "bold");
 	}
 });
 
 border.addEventListener('change', function() {
-	block.style.borderWeight = border.value + "px";
+	document.documentElement.style.setProperty('--border-size', this.value + "px");
 	block.style.borderStyle = "solid";
-	block.style.borderColor = "#000000"
 });
 
 borderRadius.addEventListener('change', function() {
-	block.style.borderRadius = this.value + "px";
+	document.documentElement.style.setProperty('--border-radius', this.value + "px");
 });
 
 colorBackground.addEventListener('change', function() {
-	block.style.backgroundColor = colorBackground.value;
+	document.documentElement.style.setProperty('--bg-color', this.value);
 });
 
 fontFamily.addEventListener('change', function() {
-	helloHeading.style.fontFamily = this.value;
+	document.documentElement.style.setProperty('--font-family', this.value);
 })
+
+borderColor.addEventListener('change', function () {
+	document.documentElement.style.setProperty('--border-color', this.value);
+});

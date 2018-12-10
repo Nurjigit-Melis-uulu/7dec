@@ -11,9 +11,20 @@
 
     <div class="container">
         <div class="content">
+            <div class="title">
+                <p>Proportys for logo:</p>
+            </div>
             <div>
                 <label for="your-name">Your name:</label>
                 <input type="text" id="your-name" value="" class="area">
+            </div>
+            <div>
+                <label for="weightHeading">Weight Header:</label>
+                <input type="number" id="weightHeading" class="area">
+            </div>
+            <div>
+                <label for="heightHeading">Height Header:</label>
+                <input type="number" id="heightHeading" class="area">
             </div>
             <div>
                 <label for="size">Size:</label>
@@ -36,7 +47,7 @@
                 </select>
             </div>
             <div>
-                <label>font-family</label>
+                <label for="font-family">font-family</label>
                 <select id="font-family">
                     <option value="inpact">Inpact</option>
                     <option value="elephant">Elephant</option>
@@ -44,24 +55,32 @@
                 </select>
             </div>
             <div class="chek">
-                <label for="Underline">Underline:</label>
-                <input type="checkbox" name="Underline" id="underline">
+                <label for="underline">Underline:</label>
+                <input type="checkbox" name="underline" id="underline">
             </div>
             <div class="chek">
-                <label for="notbold">Not bold</label>
+                <label for="notbold">Not bold:</label>
                 <input type="checkbox" name="notbold" id="notbold">
             </div>
             <div class="chek">
-                <label for="Italic">Italic</label>
-                <input type="checkbox" name="Italic" id="italic">
+                <label for="italic">Italic:</label>
+                <input type="checkbox" name="italic" id="italic">
             </div>
             <div>
                 <label for="heading-color">Color:</label>
                 <input type="color" id="heading-color">
             </div>
             <div>
-                <label for="Background">Background</label>
+                <label for="borderColor">border color</label>
+                <input type="color" name="borderColor" id="borderColor" min="0">
+            </div>
+            <div>
+                <label for="Background">Background:</label>
                 <input type="color" name="Background" id="Background">
+            </div>
+            <div>
+                <label for="lineheight">Line height:</label>
+                <input type="number" name="lineheight" id="lineheight" min="0" class="area">
             </div>
         </div>
 

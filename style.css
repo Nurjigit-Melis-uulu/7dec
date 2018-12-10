@@ -1,22 +1,35 @@
 .content {
     width: 24%;
-    margin: -5px 0 0 -5px;
+    height: 600px;
+    margin: -7px 0 0 -7px;
     border-right: 3px solid black;
+    border-bottom: 3px solid black;
     background-color: orange;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }     
+.content > div.title {
+    width: 100%;
+    height: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+}
+.title p {
+    font-size: 1.6em;
+    font-style: italic;
+}
 .content > div {
     width: 100%;
     height: 30px;
 }
 .content > div.chek {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
 }
 .content > div > label {
     width: 50%;
 }
 .content > div > input.area {
+    width: 60px;
     margin-left: 5px;
     border: 0;
     border-radius: 4px;
@@ -35,7 +48,35 @@
 .logo {
     width: 76%;
 }
+:root {
+    --text-color: black;
+    --bg-color: transparent;
+    --font-size: 20px;
+    --text-align: center;
+    --font-family: Arial;
+    --text-decor: none;
+    --font-bold: bold;
+    --font-italic: normal;
+    --border-radius: 0px;
+    --border-size: 0px;
+    --border-color: transparent;
+    --weight: 90%;
+    --height: 40px;
+    --line-height: 0px;
+}
 .logo h1 {
-    width: 90%;
+    height: var(--height);
+    width: var(--weight);
+    line-height: var(--line-height);
     margin: 40px auto;
+    font-size: var(--font-size);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-align: var(--text-align);
+    font-family: var(--font-family);
+    text-decoration: var(--text-decor);
+    font-weight: var(--font-bold);
+    font-style: var(--font-italic);
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--border-radius);
 }
